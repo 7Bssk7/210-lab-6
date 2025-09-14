@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 const int SIZE = 5;
@@ -21,10 +22,13 @@ double* enterArrayData(){
     double temp;
     double *arr = nullptr;
     arr = new double[SIZE];
+    cout << "Data entry for the array:" << endl;
     for(int i = 0; i < SIZE; ++i){
+        cout  << "    > Element #" << i << ": ";
         cin >> temp;
         arr[i] = temp;
     }
+    cout << "Data entry complete." << endl;
     return arr;
 }
 
