@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const double SIZE = 5;
+const int SIZE = 5;
 
 double* enterArrayData();
 void outputArrayData(double *arr);
@@ -29,7 +29,7 @@ double* enterArrayData(){
 
 void outputArrayData(double *arr){
     for(int i = 0; i < SIZE; ++i){
-        cout << "Element #" << i+1 << arr[i] << endl;
+        cout << "Element #" << i << " " << arr[i] << endl;
     }
 }
 
