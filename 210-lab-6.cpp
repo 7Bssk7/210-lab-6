@@ -4,32 +4,29 @@ using namespace std;
 
 const int SIZE = 5;
 
-double* enterArrayData(double *list);
+void enterArrayData(double *arr);
 double sumArray(double *arr);
 void outputArrayData(double *arr);
 
 int main(){
-    double *arr = nullptr;
-    arr = new double[SIZE] {5.5, 2.6, 3.4, 8.4, 9.2};
     double *listArr = nullptr;
     listArr = new double[SIZE];
-    listArr = enterArrayData(arr);
+    enterArrayData(listArr);
     outputArrayData(listArr);
     delete [] listArr;
 
     return 0;
 }
 
-double* enterArrayData(double *list){
-    double *arr = nullptr;
-    arr = new double[SIZE];
-    arr = list;
+void enterArrayData(double *arr){
+    double temp;
     cout << "Data entry for the array:" << endl;
     for(int i = 0; i < SIZE; ++i){
-        cout  << "    > Element #" << i << ": " << arr[i] << endl;
+        cout  << "    > Element #" << i << ": ";
+        cin >> temp;
+        arr[i] = temp;
     }
     cout << "Data entry complete." << endl;
-    return arr;
 }
 
 double sumArray(double *arr){
