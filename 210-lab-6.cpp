@@ -32,7 +32,7 @@ void enterArrayData(double *arr){
 double sumArray(double *arr){
     double sum = 0;
     for(int i = 0; i < SIZE; ++i){
-        sum += arr[i];
+        sum += *(arr + i);
     }
     return sum;
 }
@@ -40,10 +40,8 @@ double sumArray(double *arr){
 void outputArrayData(double *arr){
     cout << "Outputting array elements: ";
     for(int i = 0; i < SIZE; ++i){
-        cout << arr[i] << " ";
+        cout << *(arr + i) << " ";
     }
     cout << "\n";
     cout << "Sum of values: "<< sumArray(arr) << endl;
 }
-
-
